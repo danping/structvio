@@ -1,8 +1,5 @@
 The repository stores the binary executable of StructVIO. Please see the [project page](http://drone.sjtu.edu.cn/dpzou/project/structvio/structvio.html) for more details.
 
-![Mahattan world vs Atlanta world](http://drone.sjtu.edu.cn/dpzou/project/structvio/images/manhattan.png)
-![structvio](http://drone.sjtu.edu.cn/dpzou/project/structvio/images/structvio.png)
-
 # Running StructVIO
 After downloading the [binary file](https://github.com/danping/structvio/blob/master/binary/structvio) and extraction of 'Soft-01.zip' to the 'Soft-01' folder, we run the following command to start VIO.
 ```shell
