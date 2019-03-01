@@ -1,0 +1,76 @@
+%YAML:1.0
+# This is a configuration file for StructVIO written 
+# by Danping Zou,Lab of Navigation and Location-based Services(NLS), Shanghai Jiao Tong University.
+# Email:danping_zou@sjtu.edu.cn
+# 
+# maximum number of poses kept in the filter state
+max_frame_num: 25
+# maximun number of structure lines in each direction
+max_line_num_x: 10
+max_line_num_y: 10
+max_line_num_z: 10
+# threshold and standard deviation of feature noises
+feature_thres: 3.0
+sigma_seg: 4.2
+sigma_im: 2.2
+point_outlier_thres: 4.2
+line_outlier_thres: 2.2
+# initial inverse depth value
+invdepth0: 0.01
+#camera intrinsic marix
+K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 255.772999999999996134648,0.0,317.384000000000014551915,0.0, 255.772999999999996134648,242.143000000000000682121,0.0, 0.0, 1.0]
+#distortion parameters (one parameter FOV model, -10000 represents Invalid values)
+kc: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [0.92378997802734375,-10000.0,-10000.0,-10000.0,-10000.0]
+#image resolution
+image_width: 640
+image_height: 480
+#misalignment parameters between gyro and acc from Kalibr
+R_ga: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [0.99981049,0.01921627,0.00311797,-0.01920981,0.99981329,-0.00208883,-0.00315752,0.00202854,0.99999296]
+#gyro parameters from Kalibr
+gyro_M: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [1.00409913,0.,0.,-0.00104491,0.99840928,0.,0.00003528,-0.00003773,0.99754353]
+#acc parameters from Kalibr
+acc_M: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [0.98529621,0.,0.,-0.02645131,0.97676995,0.,-0.00366925,0.01920445,0.9838187]
+#gyro bias (wil be updated)
+gyro_bias: !!opencv-matrix
+   rows: 1
+   cols: 3
+   dt: d
+   data: [ 0., 0., 0. ]
+#acc bias (wil be updated)
+acc_bias: !!opencv-matrix
+   rows: 1
+   cols: 3
+   dt: d
+   data: [ -0.206,0.177,-0.05]
+#noise parameters of IMU
+gyro_noise_std: 5.0e-03
+acc_noise_std: 5.0e-02
+gyro_bias_random_walk_noise_std: 2.0e-04
+acc_bias_random_walk_noise_std: 1.0e-03 
+imu_rate: 100.0
+#transformation from the camera frame to the IMU frame (quaternion+translation)
+imu_cam_trans: !!opencv-matrix
+   rows: 1
+   cols: 7
+   dt: d
+   data: [-0.115784,0.993255,0.0033886,0.0051271,0.00648922,-0.0123893,-0.00512952] 

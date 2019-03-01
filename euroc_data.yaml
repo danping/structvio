@@ -1,0 +1,75 @@
+%YAML:1.0
+# This is a configuration file for StructVIO written 
+# by Danping Zou,Lab of Navigation and Location-based Services(NLS), Shanghai Jiao Tong University.
+# Email:danping_zou@sjtu.edu.cn
+# 
+# maximum number of poses kept in the filter state
+max_frame_num: 25
+# maximun number of structure lines in each direction
+max_line_num_x: 10
+max_line_num_y: 10
+max_line_num_z: 10
+# threshold and standard deviation of feature noises
+feature_thres: 3.0
+sigma_seg: 4.2
+sigma_im: 2.2
+point_outlier_thres: 3.0
+line_outlier_thres: 3.0
+# initial inverse depth value
+invdepth0: 0.1
+#camera intrinsic marix
+K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [458.654,0,367.215,0,457.296,248.375,0,0,1]
+#distortion parameters 
+kc: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [-0.28340811, 0.07395907, 0.00019359, 1.76187114e-05, 0]
+#image resolution
+image_width: 752
+image_height: 480
+#misalignment parameters between gyro and acc
+R_ga: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [1,0,0,0,1,0,0,0,1]
+#gyro parameters
+gyro_M: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [1,0,0,0,1,0,0,0,1]
+#acc parameters
+acc_M: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [1,0,0,0,1,0,0,0,1]
+#gyro bias
+gyro_bias: !!opencv-matrix
+   rows: 1
+   cols: 3
+   dt: d
+   data: [ 0., 0., 0. ]
+#acc bias
+acc_bias: !!opencv-matrix
+   rows: 1
+   cols: 3
+   dt: d
+   data: [0,0,0]
+#IMU noise parameters
+gyro_noise_std: 2.0e-03
+acc_noise_std: 0.2
+gyro_bias_random_walk_noise_std: 2.0e-04
+acc_bias_random_walk_noise_std: 5e-03
+#transformation from the camera frame to the IMU frame (rotation+translation)
+imu_cam_trans: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [ 0.0148655429818, -0.999880929698, 0.00414029679422, -0.0216401454975,0.999557249008, 0.0149672133247, 0.025715529948, -0.064676986768,-0.0257744366974, 0.00375618835797, 0.999660727178, 0.00981073058949]
