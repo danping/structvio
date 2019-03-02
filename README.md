@@ -1,4 +1,4 @@
-StructVIO is a tightly-coupled visual-inertial system that incorporates points, lines, and structural lines under Atlantas world assumption.
+**StructVIO** is a tightly-coupled visual-inertial system that incorporates *points, lines, and structural lines* under Atlantas world assumption.
 
 The repository stores only the binary executable of StructVIO and sripts for evaluation. Please see the [project page](http://drone.sjtu.edu.cn/dpzou/project/structvio.html) for more details, especially the dataset.
 
