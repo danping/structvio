@@ -1,4 +1,4 @@
-The repository stores the binary executable of StructVIO. Please see the [project page](http://drone.sjtu.edu.cn/dpzou/project/structvio/structvio.html) for more details.
+The repository stores only the binary executable of StructVIO and sripts for evaluation. Please see the [project page](http://drone.sjtu.edu.cn/dpzou/project/structvio/structvio.html) for more details, especially the dataset.
 
 # Running StructVIO
 After downloading the [binary file](https://github.com/danping/structvio/blob/master/binary/structvio) and extraction of 'Soft-01.zip' to the 'Soft-01' folder, we run the following command to start VIO.
